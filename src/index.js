@@ -1,17 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/*
+const element = document.createElement('h1') // crea elemento
+element.innerText = 'jovProgramadores' // texto
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const container = document.getElementById('root') // crea var
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+container.appendChild(element) // mostrar
+*/
+
+import React from "react";
+import ReactDOM from "react-dom";
+/*
+// crea var
+const name = 'eva'
+const element = <h1>hola {name}</h1>
+*/
+const style = {
+  color: 'red'
+}
+
+function tictac() {
+  const element = (
+    <div>
+      <h1 style={style}> Reloj</h1>
+      <h2>son las {new Date().toLocaleTimeString()}</h2>
+    </div>
+  )
+  const container = document.getElementById('root')
+  ReactDOM.render(element, container)
+}
+
+setInterval(tictac, 10000)
